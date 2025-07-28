@@ -1,0 +1,22 @@
+import { type inferRouterOutputs } from "@trpc/server";
+
+import { exampleRouter } from "./routes/example";
+import { keystaticRouter } from "./routes/keystatic";
+import { createTRPCRouter } from "./trpc";
+
+/**
+ * This is the primary router for your server.
+ *
+ * All routers added in /api/routers should be manually added here.
+ */
+export const appRouter = createTRPCRouter({
+  example: exampleRouter,
+  keystatic: keystaticRouter,
+});
+
+// export type definition of API
+export type AppRouter = typeof appRouter;
+
+export const trpcSSR = appRouter.createCaller({});
+
+export type TRPCTypeOutput = inferRouterOutputs<AppRouter>;
