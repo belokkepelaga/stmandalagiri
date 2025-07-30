@@ -55,7 +55,7 @@ const Page: FC<Props> = ({ page, articles }) => {
   }, [router.asPath]);
 
   return (
-    <ContainerContent title="KKN Sosiologi Kelompok 9 | Desa Bambangin">
+    <ContainerContent title="KKN Sosiologi Kelompok 9 | STT Mandala Giri">
       <div className="bg-white">
         {/* Header */}
         <Navbar />
@@ -110,7 +110,7 @@ const Page: FC<Props> = ({ page, articles }) => {
                   <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                     <div className="hidden sm:mb-10 sm:flex">
                       <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                        KKN Bambangin Award 🥳{" "}
+                        KKN Mandala Giri Award 🥳{" "}
                         <Link
                           href="/kkn/award"
                           className="whitespace-nowrap font-semibold text-indigo-600"

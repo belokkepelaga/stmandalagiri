@@ -27,7 +27,7 @@ export const News: FC<Props> = ({ data }) => {
             </h2>
           </Link>
           <p className="mt-2 text-lg leading-8 text-gray-600">
-            Seputar kegiatan dan perkembangan dari Desa Bambangin
+            Seputar kegiatan dan perkembangan dari STT Mandala Giri
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">

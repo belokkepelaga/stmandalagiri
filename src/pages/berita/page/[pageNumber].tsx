@@ -48,7 +48,7 @@ const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
       <ContainerContent
         styles
         className="bg-white py-24"
-        title={`Halaman ${props.berita.paging.currentPage} | Berita Desa Bambangin`}
+        title={`Halaman ${props.berita.paging.currentPage} | Berita STT Mandala Giri`}
       >
         <div className="mx-auto max-w-3xl text-base leading-7 text-gray-700">
           <BreadCrumb

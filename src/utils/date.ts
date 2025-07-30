@@ -1,12 +1,12 @@
-import { format, parse } from "date-fns";
+import * as dateFns from "date-fns";
 import { id } from "date-fns/locale";
 
 export const formatDateKeystatic = (date: string) => {
-  return format(parse(date, "yyyy-MM-dd", new Date()), "eeee, d MMMM yyyy", {
+  return dateFns.format(dateFns.parse(date, "yyyy-MM-dd", new Date()), "eeee, d MMMM yyyy", {
     locale: id,
   });
 };
 
 export const parseDateKeystatic = (date: string) => {
-  return parse(date, "yyyy-MM-dd", new Date());
+  return dateFns.parse(date, "yyyy-MM-dd", new Date());
 };

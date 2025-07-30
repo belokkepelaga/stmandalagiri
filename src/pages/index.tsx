@@ -7,7 +7,7 @@ export const getStaticProps = async () => {
   const homepage = await trpcSSR.keystatic.homepage();
   const hightlights = await trpcSSR.keystatic.highlights();
   const profil = await trpcSSR.keystatic.pages({
-    slug: "profil-desa",
+    slug: "profil-stt",
   });
 
   return {
@@ -29,7 +29,7 @@ const Page = (props: Props) => {
   return (
     <main>
       <Navbar />
-      <ContainerContent title="Home | Desa Bambangin">
+      <ContainerContent title="Home | STT Mandala Giri">
         <Hero title={props.homepage.title} subtitle={props.homepage.subtitle} />
         <News data={props.hightlights} />
         <Profile title={props.profil.title} content={props.profil.content} />

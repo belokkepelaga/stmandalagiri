@@ -15,7 +15,7 @@ import {
           kind: "github",
           repo: {
             owner: "zakiego",
-            name: "desa-bambangin-2023",
+            name: "stt-mandala-giri-2023",
           },
         };
   
@@ -259,7 +259,14 @@ import {
           }),
           content: fields.document({
             label: "Content",
-            formatting: true,
+            formatting: {
+              inlineMarks: true,
+              listTypes: true,
+              alignment: true,
+              headingLevels: true,
+              blockTypes: true,
+              softBreaks: true,
+            },
             links: true,
             images: {
               directory: "public/images/content/berita",

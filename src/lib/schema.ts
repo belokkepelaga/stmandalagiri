@@ -36,7 +36,13 @@ export const keystaticSchema = {
       mission: z.object({
         heading: z.string(),
         subheading: z.string(),
-        content: z.any(),
+        content: z.array(
+          z.object({
+            type: z.string(),
+            children: z.array(z.any()),
+            textAlign: z.string().optional().nullable(),
+          })
+        ),
       }),
       values: z.object({
         image: z.string(),
@@ -80,7 +86,13 @@ export const keystaticSchema = {
       image: z.string(),
       datePublished: z.string(),
       summary: z.string(),
-      content: z.any(),
+      content: z.array(
+        z.object({
+          type: z.string(),
+          children: z.array(z.any()),
+          textAlign: z.string().optional().nullable(),
+        })
+      ),
       id: z.string(),
       slug: z.string(),
       author: z.object({
@@ -120,7 +132,13 @@ export const keystaticSchema = {
     image: z.string(),
     datePublished: z.string(),
     summary: z.string(),
-    content: z.any(),
+    content: z.array(
+      z.object({
+        type: z.string(),
+        children: z.array(z.any()),
+        textAlign: z.string().optional().nullable(),
+      })
+    ),
     id: z.string(),
     slug: z.string(),
   }),
@@ -130,7 +148,29 @@ export const keystaticSchema = {
     image: z.string(),
     datePublished: z.string(),
     summary: z.string(),
-    content: z.any(),
+    content: z.array(
+      z.object({
+        type: z.string(),
+        children: z.array(z.any()),
+        textAlign: z.string().optional().nullable(),
+      })
+    ),
+    id: z.string(),
+    slug: z.string(),
+  }),
+
+  highlights: z.object({
+    title: z.string(),
+    image: z.string(),
+    datePublished: z.string(),
+    summary: z.string(),
+    content: z.array(
+      z.object({
+        type: z.string(),
+        children: z.array(z.any()),
+        textAlign: z.string().optional().nullable(),
+      })
+    ),
     id: z.string(),
     slug: z.string(),
   }),

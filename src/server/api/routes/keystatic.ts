@@ -33,13 +33,22 @@ export const keystaticRouter = createTRPCRouter({
     const getAllBerita = listHighlights.content.map(async (slug) => {
       const beritaData = await keystaticReader.collections.berita.read(slug);
 
+      const content = await beritaData?.content();
+
+      const transformedContent = content.map((item: any) => {
+        if (item.textAlign === undefined) {
+          item.textAlign = null;
+        }
+        return item;
+      });
+
       const render = {
         ...beritaData,
-        content: await beritaData?.content(),
+        content: transformedContent,
         slug,
       };
 
-      const data = keystaticSchema.berita.parse(render);
+      const data = keystaticSchema.highlights.parse(render);
 
       return data;
     });
@@ -73,7 +82,23 @@ export const keystaticRouter = createTRPCRouter({
         teamPeople: await Promise.all(teamPeople),
       };
 
-      const parsed = keystaticSchema.kkn.page.parse(render);
+      const content = await data.mission.content();
+
+      const transformedContent = content.map((item: any) => {
+        if (item.textAlign === undefined) {
+          item.textAlign = null;
+        }
+        return item;
+      });
+
+      const parsed = keystaticSchema.kkn.page.parse({
+        ...data,
+        mission: {
+          ...data.mission,
+          content: transformedContent,
+        },
+        teamPeople: await Promise.all(teamPeople),
+      });
 
       return parsed;
     }),
@@ -111,7 +136,21 @@ export const keystaticRouter = createTRPCRouter({
             author,
           };
 
-          const data = keystaticSchema.kkn.article.parse(render);
+          const content = await raw?.content();
+
+          const transformedContent = content.map((item: any) => {
+            if (item.textAlign === undefined) {
+              item.textAlign = null;
+            }
+            return item;
+          });
+
+          const data = keystaticSchema.kkn.article.parse({
+            ...raw,
+            content: transformedContent,
+            slug,
+            author,
+          });
 
           return data;
         }),
@@ -134,9 +173,18 @@ export const keystaticRouter = createTRPCRouter({
               item.entry.author as string,
             );
 
+            const content = await item.entry.content();
+
+            const transformedContent = content.map((c: any) => {
+              if (c.textAlign === undefined) {
+                c.textAlign = null;
+              }
+              return c;
+            });
+
             return {
               ...item.entry,
-              content: await item.entry.content(),
+              content: transformedContent,
               slug: item.slug,
               author,
             };
@@ -205,10 +253,19 @@ export const keystaticRouter = createTRPCRouter({
 
       const data = await keystaticReader.collections.pages.readOrThrow(slug);
 
+      const content = await data.content();
+
+      const transformedContent = content.map((item: any) => {
+        if (item.textAlign === undefined) {
+          item.textAlign = null;
+        }
+        return item;
+      });
+
       const parsed = keystaticSchema.pages.parse({
         ...data,
         slug,
-        content: await data.content(),
+        content: transformedContent,
       });
 
       return parsed;
@@ -228,9 +285,18 @@ export const keystaticRouter = createTRPCRouter({
         const raw = await keystaticReader.collections.berita.all();
 
         const render = raw.map(async (item) => {
+          const content = await item.entry.content();
+
+          const transformedContent = content.map((c: any) => {
+            if (c.textAlign === undefined) {
+              c.textAlign = null;
+            }
+            return c;
+          });
+
           return {
             ...item.entry,
-            content: await item.entry.content(),
+            content: transformedContent,
             slug: item.slug,
           };
         });
@@ -281,7 +347,20 @@ export const keystaticRouter = createTRPCRouter({
           slug,
         };
 
-        const data = keystaticSchema.berita.parse(render);
+        const content = await raw?.content();
+
+        const transformedContent = content.map((item: any) => {
+          if (item.textAlign === undefined) {
+            item.textAlign = null;
+          }
+          return item;
+        });
+
+        const data = keystaticSchema.berita.parse({
+          ...raw,
+          content: transformedContent,
+          slug,
+        });
 
         return data;
       }),

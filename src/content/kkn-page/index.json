@@ -1,7 +1,7 @@
 {
   "hero": {
     "heading": "KKN Sosiologi Kelompok 9",
-    "subheading": "Kami adalah kelompok KKN Sosiologi Universitas Lambung Mangkurat tahun 2023, terdiri dari 7 orang yang luar biasa. Mengabdikan diri kepada masyarakat Desa Bambangin, kami berkomitmen untuk memberikan manfaat nyata dan menciptakan perubahan positif yang berarti dalam kehidupan bersama.",
+    "subheading": "Kami adalah kelompok KKN Sosiologi Universitas Lambung Mangkurat tahun 2023, terdiri dari 7 orang yang luar biasa. Mengabdikan diri kepada masyarakat STT Mandala Giri, kami berkomitmen untuk memberikan manfaat nyata dan menciptakan perubahan positif yang berarti dalam kehidupan bersama.",
     "images": [
       "/images/content/kkn-page/hero/hero/images/0.jpg",
       "/images/content/kkn-page/hero/hero/images/1.jpeg",
@@ -12,12 +12,12 @@
   },
   "mission": {
     "heading": "Misi Kami",
-    "subheading": "Kami memiliki misi yang kuat untuk memberikan kontribusi yang signifikan bagi masyarakat Desa Bambangin melalui program KKN kami. Dengan tekad yang tinggi, kami bertujuan untuk menciptakan perubahan positif yang berarti dan memberikan manfaat nyata kepada masyarakat."
+    "subheading": "Kami memiliki misi yang kuat untuk memberikan kontribusi yang signifikan bagi masyarakat STT Mandala Giri melalui program KKN kami. Dengan tekad yang tinggi, kami bertujuan untuk menciptakan perubahan positif yang berarti dan memberikan manfaat nyata kepada masyarakat."
   },
   "values": {
     "image": "/images/content/kkn-page/values/values/image.jpg",
-    "heading": "Bambangin BARASIH",
-    "subheading": "BARASIH adalah inti dari program KKN kami yang bertujuan untuk membangun bank sampah yang berkelanjutan dan memberikan manfaat maksimal kepada masyarakat Desa Bambangin.",
+    "heading": "Mandala Giri BARASIH",
+    "subheading": "BARASIH adalah inti dari program KKN kami yang bertujuan untuk membangun bank sampah yang berkelanjutan dan memberikan manfaat maksimal kepada masyarakat STT Mandala Giri.",
     "items": [
       {
         "title": "Berdaya",
@@ -64,8 +64,8 @@
     }
   ],
   "blog": {
-    "heading": "Cerita dari Bambangin",
-    "subheading": "Keseharian kami selama melaksanakan KKN di Desa Bambangin"
+    "heading": "Cerita dari Mandala Giri",
+    "subheading": "Keseharian kami selama melaksanakan KKN di STT Mandala Giri"
   },
   "team": {
     "heading": "Berkenalan dengan Tim yang Menakjubkan",

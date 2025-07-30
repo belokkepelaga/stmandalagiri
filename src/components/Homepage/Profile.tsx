@@ -27,7 +27,7 @@ export const Profile: FC<Props> = ({ title, content }) => {
           </div>
         </div>
         <Link
-          href={"/profil-desa"}
+          href={"/profil-stt"}
           className="flex items-center rounded-md mt-8 w-fit bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
         >
           Baca Selengkapnya

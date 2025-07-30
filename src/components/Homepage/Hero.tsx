@@ -3,7 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { type FC } from "react";
 
-import HeroImage from "~/public/images/hero.jpg";
+// import HeroImage from "~/public/images/hero.jpg";
+// import HeroImage from "@/"
+// /Users/haydaramru/Developer/stmandalagiri/public/images/hero.jpg
+import HeroImage from "public/images/hero.jpg"
 
 interface HeroProps {
   title: string;
@@ -58,10 +61,10 @@ export const Hero: FC<HeroProps> = ({ title, subtitle }) => {
                 Google Maps
               </a>
               <Link
-                href="/profil-desa"
+                href="/profil-stt"
                 className="text-sm font-semibold leading-6 text-white"
               >
-                Baca Profil Desa <span aria-hidden="true">→</span>
+                Baca Profil STT <span aria-hidden="true">→</span>
               </Link>
             </div>
           </div>

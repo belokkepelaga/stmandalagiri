@@ -18,7 +18,7 @@ export const ListNews: FC<Props> = (props) => {
             Berita Terbaru
           </h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">
-            Seputar kegiatan dan perkembangan dari Desa Bambangin
+            Seputar kegiatan dan perkembangan dari STT Mandala Giri
           </p>
           <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
             {props.data.map((post) => (

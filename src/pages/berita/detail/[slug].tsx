@@ -41,7 +41,7 @@ import {
         <Navbar />
         <SimpleLayout
           meta={{
-            title: `${props.berita.title} | Berita Desa Bambangin`,
+            title: `${props.berita.title} | Berita STT Mandala Giri`,
             description: props.berita.summary,
             image: props.berita.image,
           }}
