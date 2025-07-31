@@ -31,7 +31,7 @@ const Page = (props: Props) => {
       <Navbar />
       <ContainerContent title="Home | STT Mandala Giri">
         <Hero title={props.homepage.title} subtitle={props.homepage.subtitle} />
-        <News data={props.hightlights} />
+        {/* <News data={props.hightlights} /> */}
         <Profile title={props.profil.title} content={props.profil.content} />
       </ContainerContent>
       <Footer />
