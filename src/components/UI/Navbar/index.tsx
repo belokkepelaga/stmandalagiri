@@ -9,7 +9,6 @@ const navigation = [
   { name: "Beranda", href: "/" },
   { name: "Berita", href: "/berita" },
   { name: "Profil STT", href: "/profil-stt" },
-  { name: "KKN", href: "/kkn" },
 ];
 
 export const Navbar = () => {

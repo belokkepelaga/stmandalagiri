@@ -3,9 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { type FC } from "react";
 
-// import HeroImage from "~/public/images/hero.jpg";
-// import HeroImage from "@/"
-// /Users/haydaramru/Developer/stmandalagiri/public/images/hero.jpg
 import HeroImage from "public/images/hero.jpg"
 
 interface HeroProps {
@@ -36,15 +33,6 @@ export const Hero: FC<HeroProps> = ({ title, subtitle }) => {
           />
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="flex mb-8 justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-              KKN Sosiologi 2023 {""}
-              <Link href="/kkn" className="font-semibold text-white">
-                <span className="absolute inset-0" aria-hidden="true" />
-                Lihat Keseruannya <span aria-hidden="true">&rarr;</span>
-              </Link>
-            </div>
-          </div>
           <div className="text-center duration-1000 animate-in fade-in">
             <h1 className="  text-4xl font-bold tracking-tight text-white sm:text-6xl">
               {title}
@@ -52,7 +40,7 @@ export const Hero: FC<HeroProps> = ({ title, subtitle }) => {
             <p className="mt-6 text-lg leading-8 text-gray-300">{subtitle}</p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="https://goo.gl/maps/rN1xQHpXef5VNsaN7"
+                href="https://maps.app.goo.gl/GeQZAJXy1n47tiVZA"
                 className="flex items-center rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 target="_blank"
                 rel="noopener noreferrer"
