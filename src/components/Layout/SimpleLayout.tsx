@@ -104,10 +104,10 @@ import {
                 block: {
                   heading: (props) => {
                     if (props.level === 2) {
-                      return <h2 className="text-red-500 text-5xl font-bold">{props.children}</h2>;
+                      return <h2 className="text-red-500 text-5xl font-bold">{props.children as React.ReactNode}</h2>;
                     }
                     const Tag = `h${props.level}` as keyof JSX.IntrinsicElements;
-                    return <Tag>{props.children}</Tag>;
+                    return <Tag>{props.children as React.ReactNode}</Tag>;
                   },
                   image(props) {
                     return <Image src={props.src} className="rounded-xl" width={700} height={400} alt={props.alt || ""} />;
