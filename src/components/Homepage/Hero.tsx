@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { type FC } from "react";
 
-import HeroImage from "public/images/hero.jpg"
+import HeroImage from "public/images/hero.jpeg"
 
 interface HeroProps {
   title: string;

@@ -33,9 +33,13 @@ export const keystaticRouter = createTRPCRouter({
     const getAllBerita = listHighlights.content.map(async (slug) => {
       const beritaData = await keystaticReader.collections.berita.read(slug);
 
+      if (!beritaData) {
+        return null;
+      }
+
       const content = await beritaData?.content();
 
-      const transformedContent = content.map((item: any) => {
+      const transformedContent = content?.map((item: any) => {
         if (item.textAlign === undefined) {
           item.textAlign = null;
         }
@@ -48,12 +52,12 @@ export const keystaticRouter = createTRPCRouter({
         slug,
       };
 
-      const data = keystaticSchema.highlights.parse(render);
+      const data = keystaticSchema.berita.parse(render);
 
       return data;
     });
 
-    const data = await Promise.all(getAllBerita);
+    const data = (await Promise.all(getAllBerita)).filter(Boolean);
 
     return data;
   }),
@@ -84,7 +88,7 @@ export const keystaticRouter = createTRPCRouter({
 
       const content = await data.mission.content();
 
-      const transformedContent = content.map((item: any) => {
+      const transformedContent = content?.map((item: any) => {
         if (item.textAlign === undefined) {
           item.textAlign = null;
         }
@@ -138,7 +142,7 @@ export const keystaticRouter = createTRPCRouter({
 
           const content = await raw?.content();
 
-          const transformedContent = content.map((item: any) => {
+          const transformedContent = content?.map((item: any) => {
             if (item.textAlign === undefined) {
               item.textAlign = null;
             }
@@ -175,7 +179,7 @@ export const keystaticRouter = createTRPCRouter({
 
             const content = await item.entry.content();
 
-            const transformedContent = content.map((c: any) => {
+            const transformedContent = content?.map((c: any) => {
               if (c.textAlign === undefined) {
                 c.textAlign = null;
               }
@@ -255,7 +259,7 @@ export const keystaticRouter = createTRPCRouter({
 
       const content = await data.content();
 
-      const transformedContent = content.map((item: any) => {
+      const transformedContent = content?.map((item: any) => {
         if (item.textAlign === undefined) {
           item.textAlign = null;
         }
@@ -287,7 +291,7 @@ export const keystaticRouter = createTRPCRouter({
         const render = raw.map(async (item) => {
           const content = await item.entry.content();
 
-          const transformedContent = content.map((c: any) => {
+          const transformedContent = content?.map((c: any) => {
             if (c.textAlign === undefined) {
               c.textAlign = null;
             }
@@ -349,7 +353,7 @@ export const keystaticRouter = createTRPCRouter({
 
         const content = await raw?.content();
 
-        const transformedContent = content.map((item: any) => {
+        const transformedContent = content?.map((item: any) => {
           if (item.textAlign === undefined) {
             item.textAlign = null;
           }
